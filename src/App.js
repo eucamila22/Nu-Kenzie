@@ -4,11 +4,11 @@ import IndexHome from './Components/Home/Index';
 import IndexWelcome from './Components/Welcome/Index';
 
 function App() {
-  const [state, setState] = useState(false)
+  const [renderPage, setRenderPage] = useState(false)
 
   return (
     <div>
-      {state ? (<IndexHome setState={setState}/>) : (<IndexWelcome setState={setState}/>)}
+      {renderPage ? (<IndexHome setRenderPage={setRenderPage}/>) : (<IndexWelcome setRenderPage={setRenderPage}/>)}
     </div>
   );
 }

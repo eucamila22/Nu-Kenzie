@@ -12,3 +12,47 @@ code {
     monospace;
 }
 
+@media (max-width:760px){
+  .App {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .div-text {
+    margin-top: 80px;
+  }
+
+  .imageDiv {
+    width: 70%;
+    margin-left: 10%;
+  }
+
+}
+
+@media (max-width:1200px){
+  .App {
+    width: 100vw;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .div-text {
+    margin-left: 80px;
+  }
+
+  .imageDiv {
+    width: 70%;
+    margin-left: 10%;
+  }
+
+  .div-master-header-home > div {
+    width: 95%;
+  }
+
+  .div-master-nav-aside {
+    width: 60%;
+}
+}
+

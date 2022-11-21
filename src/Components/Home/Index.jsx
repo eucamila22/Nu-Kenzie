@@ -4,9 +4,10 @@ import Header from './Header'
 import Result from './Result'
 import NavAside from './NavAside'
 import ListCard from './ListCard'
+import NoCardDiv from './NoCardDiv'
 
 
-const Index = ({setState}) => {
+const Index = ({setRenderPage}) => {
     const [dados, setDados] = useState([])
     const [filTer, setFilTer] = useState('Todos')
 
@@ -26,16 +27,21 @@ const Index = ({setState}) => {
     return (
         <div>
             <div>
-                <Header setState={setState}/>
+                <Header setRenderPage={setRenderPage}/>
             </div>
             <div className='container'>
                 <div>
                     <Form setDados={setDados}/>
-                    <Result dados={dados}/>
+                    {
+                        dados.length !== 0 && (<Result dados={dados}/>)
+                    } 
+                    
                 </div>
                 <div>
                 <NavAside setFilTer={setFilTer} dados={dados}/>
+                
                 {
+                    
                     filtered.map((dado, index) => (
                         <ListCard
                             key={index}
@@ -46,6 +52,9 @@ const Index = ({setState}) => {
                         />
                     ))
                 }
+                {
+                    filtered.length === 0 && (<NoCardDiv dados={dados} />)
+                } 
                 </div>           
             </div>
         </div>

@@ -9,7 +9,12 @@ const Result = ({index, element, dados}) => {
         <span>O valor se refere ao saldo</span>
         </div>
         <div>
-          <p key={index} className='total'>R$ {dados.reduce((acc, act) => acc + Number(act.number), 0)}</p>
+          <p key={index}
+             className='total'>R$
+             {
+                dados.reduce((acc, act) =>{
+                  return act.valueSelect === 'Entrada' ? act.number * 1 + acc : acc - act.number * 1}, 0)
+             }</p>
         </div>
     </div>
     
