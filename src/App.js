@@ -1,16 +1,20 @@
-import { useState } from 'react';
-import './App.css';
-import IndexHome from './Components/Home/Index';
-import IndexWelcome from './Components/Welcome/Index';
+import { useState } from 'react'
+import './App.css'
+import Dashboard from './pages/Dashboard'
+import Home from './pages/Home'
 
-function App() {
-  const [renderPage, setRenderPage] = useState(false)
+const App = () => {
+    const [renderPage, setRenderPage] = useState(false)
 
-  return (
-    <div>
-      {renderPage ? (<IndexHome setRenderPage={setRenderPage}/>) : (<IndexWelcome setRenderPage={setRenderPage}/>)}
-    </div>
-  );
+    return (
+        <div className='app-home'>
+            {renderPage ? (
+                <Dashboard setRenderPage={setRenderPage} />
+            ) : (
+                <Home setRenderPage={setRenderPage} />
+            )}
+        </div>
+    )
 }
 
-export default App;
+export default App
