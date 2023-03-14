@@ -9,3 +9,5 @@
 
 <p>Além disso, o projeto foi desenvolvido em React, utilizando Styled Components para melhor organização do código e legibilidade.</p>
 <p>A responsividade também está presente, adaptando o layout da aplicação em diversos aparelhos.</p>
+
+https://projeto-nu-kenzie.vercel.app/
